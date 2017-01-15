@@ -8,15 +8,9 @@ import time
 
 import urllib
 
-import urllib2
-
 from bs4 import BeautifulSoup
 
 from slugify import slugify
-
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
-
 
 TOKEN = '293359250:AAFpQ_kIrXD5v2Jab83R6aBkbu8eA0N185k'
 
@@ -58,7 +52,7 @@ def handleBotMessage(msg):
 
     url = "https://www.youtube.com/results?search_query=" + query
 
-    response = urllib2.urlopen(url)
+    response = urllib.request.urlopen(url)
 
 
 
@@ -172,7 +166,7 @@ def downloadSong(url, fileLoc):
 
     f = open(fileLoc, 'wb')
 
-    usock = urllib2.urlopen(url)
+    usock = urllib.request.urlopen(url)
 
     try :
 
@@ -214,7 +208,7 @@ print ('Listening...')
 
 
 
-path = '/Users/apoorvam/Downloads/Bot/'
+path = '/Users/root/nmb/Bot/'
 
 
 
