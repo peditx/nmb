@@ -28,7 +28,7 @@ base_url = 'http://www.youtubeinmp3.com/fetch/?format=JSON&video='
 
 def handleBotMessage(msg):
 
-    print 'handing message...'
+    print ('handing message...')
 
     chat_id = msg['from']['id']
 
@@ -36,7 +36,7 @@ def handleBotMessage(msg):
 
     username = msg['from']['first_name']
 
-    print 'Request accepted'
+    print ('Request accepted')
 
 
 
@@ -158,7 +158,7 @@ def handleBotMessage(msg):
 
         except ValueError as e:
 
-            print 'No song found', e
+            print ('No song found', e)
 
             bot.sendMessage(chat_id, 'No song found. Please try again with a different keyword.')
 
@@ -202,7 +202,7 @@ def downloadSong(url, fileLoc):
 
 
 
-    print "done"
+    print ("done")
 
 
 
@@ -210,7 +210,7 @@ bot = telepot.Bot(TOKEN)
 
 bot.notifyOnMessage(handleBotMessage)
 
-print 'Listening...'
+print ('Listening...')
 
 
 
